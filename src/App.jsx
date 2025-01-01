@@ -28,7 +28,7 @@ function App() {
     },
   ]
 , {
-  basename: '/Start_React'
+  basename: '/testreact'
 });
 
   return (
