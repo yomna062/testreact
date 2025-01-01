@@ -1,0 +1,129 @@
+.navbar-nav .nav-link {
+    transition: all 0.5s ease-in-out; /* تطبيق انتقال سلس */
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #1ABC9C;
+    border-radius: 12px; 
+    color: white; 
+    transform: scale(1.1); 
+}
+.about ,.home, .btn-contact{
+  background-color: #1ABC9C;
+}
+.navbar-nav .nav-link:not(.active) {
+    background-color: transparent; /* لون خلفية شفاف عند عدم التفعيل */
+    color: black; /* لون النص عند عدم التفعيل */
+    transform: scale(1); /* العودة للحجم الأصلي */
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+     /* لضمان أن الصورة لا تتجاوز الحواف */
+  }
+  
+  /* تنسيق الصورة */
+  .img-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* تأثير تكبير الصورة */
+  }
+  
+  /* تنسيق النص داخل الصورة */
+  .img-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* تغطية العرض بالكامل */
+    height: 100%; /* تغطية الارتفاع بالكامل */
+    background-color: rgba(108, 224, 170, 0.3); /* خلفية رمادية شفافة */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* لجعل النص في المنتصف */
+    opacity: 0; /* إخفاء النص بشكل افتراضي */
+    transition: opacity 0.3s ease; /* تأثير سلس عند إظهار/إخفاء النص */
+  }
+  
+  /* تأثير التمرير */
+  .img-container:hover img {
+    transform: scale(1.1); /* تكبير الصورة عند التمرير */
+  }
+  
+  .img-container:hover .img-info {
+    opacity: 1; /* إظهار النص والخلفية عند التمرير */
+  }
+  /* styles.css */
+.form-control:focus {
+  outline: none; /* Remove the default outline */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Replace with a subtle box-shadow (example) */
+  border-color: #1ABC9C; /* Optional: Change border color on focus if you want */
+}
+.footer{
+  margin-top: 20px;
+  height: 200px;
+  background-color: #2C3E50;
+  color:white;
+  padding-inline: 200px;
+}
+
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreen-content {
+  position: relative;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.fullscreen-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  background: white;
+  color: black;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+    width: 30px;
+  height: 30px; 
+
+
+  cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.icon-x{
+    position: absolute;
+
+    font-size: 20px;
+    right: 7px;
+}
+.img-container .img-info h2 {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.img-container .img-info h2:hover {
+  color: #0056b3;
+}
